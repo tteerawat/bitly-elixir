@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/teerawat1992/bitly-elixir.svg?branch=master)](https://travis-ci.org/teerawat1992/bitly-elixir)
 [![Hex.pm](https://img.shields.io/hexpm/v/bitly.svg?style=flat-square)](https://hex.pm/packages/bitly)
+[![Coverage Status](https://coveralls.io/repos/github/teerawat1992/bitly-elixir/badge.svg)](https://coveralls.io/github/teerawat1992/bitly-elixir)
 
 **An Elixir API for [bitly](http://bitly.com).**
 

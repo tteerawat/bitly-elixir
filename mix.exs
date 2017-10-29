@@ -12,7 +12,8 @@ defmodule Bitly.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       package: package(),
-      docs: [extras: ["README.md"]]
+      docs: [extras: ["README.md"]],
+      test_coverage: [tool: ExCoveralls]
     ]
   end
 
@@ -27,7 +28,8 @@ defmodule Bitly.MixProject do
       {:tesla, "~> 0.9"},
       {:poison, "~> 2.0 or ~> 3.0"},
       {:ex_doc, "~> 0.18.1", only: :dev, runtime: false},
-      {:exvcr, "~> 0.9.0", only: :test}
+      {:exvcr, "~> 0.9.0", only: :test},
+      {:excoveralls, "~> 0.7.4", only: :test}
     ]
   end
 
