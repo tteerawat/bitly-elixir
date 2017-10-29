@@ -1,0 +1,36 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "user-agent": "Bitly-Elixir"
+      },
+      "method": "get",
+      "options": {
+        "httpc_options": [],
+        "http_options": {
+          "autoredirect": "false"
+        }
+      },
+      "request_body": "",
+      "url": "https://api-ssl.bitly.com/v3/info?shortUrl=http%3A%2F%2Fbit.ly%2Fze6poY&hash=2bYgqR&access_token=ACCESS_TOKEN"
+    },
+    "response": {
+      "body": "{\"status_code\": 200, \"data\": {\"info\": [{\"hash\": \"2bYgqR\", \"title\": \"CNN - Breaking News, Latest News and Videos\", \"created_at\": 1212926400, \"global_hash\": \"2bYgqR\", \"user_hash\": \"2bYgqR\"}, {\"title\": \"Google\", \"short_url\": \"http://bit.ly/ze6poY\", \"created_at\": 1331569103, \"global_hash\": \"900913\", \"user_hash\": \"ze6poY\"}]}, \"status_txt\": \"OK\"}",
+      "headers": {
+        "connection": "keep-alive",
+        "date": "Sun, 29 Oct 2017 16:27:13 GMT",
+        "etag": "\"042b5cd802c2fddac86716c61e979ad6bb19be24\"",
+        "server": "nginx",
+        "content-length": "342",
+        "content-type": "application/json; charset=utf-8"
+      },
+      "status_code": [
+        "HTTP/1.1",
+        200,
+        "OK"
+      ],
+      "type": "ok"
+    }
+  }
+]

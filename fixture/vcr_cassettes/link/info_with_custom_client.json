@@ -1,0 +1,36 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "user-agent": "Bitly-Elixir"
+      },
+      "method": "get",
+      "options": {
+        "httpc_options": [],
+        "http_options": {
+          "autoredirect": "false"
+        }
+      },
+      "request_body": "",
+      "url": "https://api-ssl.bitly.com/v3/info?shortUrl=http%3A%2F%2Fbit.ly%2Fze6poY&format=json&access_token=ACCESS_TOKEN"
+    },
+    "response": {
+      "body": "{\"status_code\": 200, \"data\": {\"info\": [{\"title\": \"Google\", \"short_url\": \"http://bit.ly/ze6poY\", \"created_at\": 1331569103, \"global_hash\": \"900913\", \"user_hash\": \"ze6poY\"}]}, \"status_txt\": \"OK\"}",
+      "headers": {
+        "connection": "keep-alive",
+        "date": "Sun, 29 Oct 2017 16:27:14 GMT",
+        "etag": "\"9c89c2fb58d3dfc089150bc3fe23a6725acc8d0d\"",
+        "server": "nginx",
+        "content-length": "192",
+        "content-type": "application/json; charset=utf-8"
+      },
+      "status_code": [
+        "HTTP/1.1",
+        200,
+        "OK"
+      ],
+      "type": "ok"
+    }
+  }
+]

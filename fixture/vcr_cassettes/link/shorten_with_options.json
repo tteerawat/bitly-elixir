@@ -1,0 +1,35 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "user-agent": "Bitly-Elixir"
+      },
+      "method": "get",
+      "options": {
+        "httpc_options": [],
+        "http_options": {
+          "autoredirect": "false"
+        }
+      },
+      "request_body": "",
+      "url": "https://api-ssl.bitly.com/v3/shorten?longUrl=http%3A%2F%2Fgoogle.com%2F&format=txt&domain=j.mp&access_token=ACCESS_TOKEN"
+    },
+    "response": {
+      "body": "http://j.mp/2iHe1Wi\n",
+      "headers": {
+        "connection": "keep-alive",
+        "date": "Sun, 29 Oct 2017 16:27:12 GMT",
+        "server": "nginx",
+        "content-length": "20",
+        "content-type": "text/plain; charset=utf-8"
+      },
+      "status_code": [
+        "HTTP/1.1",
+        200,
+        "OK"
+      ],
+      "type": "ok"
+    }
+  }
+]
