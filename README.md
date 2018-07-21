@@ -13,7 +13,7 @@ Add `bitly` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:bitly, "~> 0.1.0"}
+    {:bitly, "~> 0.1"}
   ]
 end
 ```
