@@ -1,12 +1,12 @@
 defmodule Bitly.LinkTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   use ExVCR.Mock, adapter: ExVCR.Adapter.Httpc
 
-  alias Bitly.Client
-  alias Bitly.Link
+  alias Bitly.{Client, Link}
 
-  setup_all do
+  setup do
     ExVCR.Config.cassette_library_dir("fixture/vcr_cassettes/link")
+
     :ok
   end
 

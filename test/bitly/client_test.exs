@@ -1,5 +1,5 @@
 defmodule Bitly.ClientTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
 
   alias Bitly.Client
 
