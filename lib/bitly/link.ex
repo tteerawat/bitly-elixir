@@ -69,7 +69,7 @@ defmodule Bitly.Link do
 
   defp get_response_body(client, path, query) do
     client
-    |> Client.get(path, query: query)
+    |> Client.get!(path, query: query)
     |> handle_response_body()
   end
 

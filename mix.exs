@@ -25,7 +25,7 @@ defmodule Bitly.MixProject do
 
   defp deps do
     [
-      {:tesla, "~> 0.9"},
+      {:tesla, "~> 1.1"},
       {:poison, "~> 2.0 or ~> 3.0"},
       {:ex_doc, "~> 0.18.1", only: :dev, runtime: false},
       {:exvcr, "~> 0.9.0", only: :test},

@@ -13,7 +13,7 @@ defmodule Bitly.Client do
     access_token = attrs[:access_token] || Application.get_env(:bitly, :access_token)
 
     Tesla.build_client([
-      {Tesla.Middleware.Headers, %{"User-Agent" => "Bitly-Elixir"}},
+      {Tesla.Middleware.Headers, [{"user-agent", "Bitly-Elixir"}]},
       {Tesla.Middleware.BaseUrl, base_url},
       {Tesla.Middleware.Query, [access_token: access_token]}
     ])

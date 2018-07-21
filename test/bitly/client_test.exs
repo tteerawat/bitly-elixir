@@ -10,7 +10,7 @@ defmodule Bitly.ClientTest do
       {_, _, [headers]} =
         Enum.find(client.pre, fn {middleware, _, _} -> middleware == Tesla.Middleware.Headers end)
 
-      assert headers == %{"User-Agent" => "Bitly-Elixir"}
+      assert headers == [{"user-agent", "Bitly-Elixir"}]
     end
 
     test "sets base_url correctly" do
