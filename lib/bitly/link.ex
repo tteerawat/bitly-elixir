@@ -74,8 +74,8 @@ defmodule Bitly.Link do
   end
 
   defp handle_response_body(%{body: body}) do
-    case Poison.decode(body, as: %__MODULE__{}) do
-      {:ok, result} -> result
+    case Jason.decode(body, keys: :atoms) do
+      {:ok, map} -> struct(Bitly.Link, map)
       {:error, _} -> body
     end
   end

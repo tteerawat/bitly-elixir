@@ -18,12 +18,12 @@ defmodule Bitly.LinkTest do
         assert Link.expand("http://bit.ly/ze6poY") ==
                  %Link{
                    data: %{
-                     "expand" => [
+                     expand: [
                        %{
-                         "global_hash" => "900913",
-                         "long_url" => "http://google.com/",
-                         "short_url" => "http://bit.ly/ze6poY",
-                         "user_hash" => "ze6poY"
+                         global_hash: "900913",
+                         long_url: "http://google.com/",
+                         short_url: "http://bit.ly/ze6poY",
+                         user_hash: "ze6poY"
                        }
                      ]
                    },
@@ -53,12 +53,12 @@ defmodule Bitly.LinkTest do
         assert Link.expand("http://bit.ly/ze6poY", [], client) ==
                  %Link{
                    data: %{
-                     "expand" => [
+                     expand: [
                        %{
-                         "global_hash" => "900913",
-                         "long_url" => "http://google.com/",
-                         "short_url" => "http://bit.ly/ze6poY",
-                         "user_hash" => "ze6poY"
+                         global_hash: "900913",
+                         long_url: "http://google.com/",
+                         short_url: "http://bit.ly/ze6poY",
+                         user_hash: "ze6poY"
                        }
                      ]
                    },
@@ -77,13 +77,13 @@ defmodule Bitly.LinkTest do
         assert Link.info("http://bit.ly/ze6poY") ==
                  %Link{
                    data: %{
-                     "info" => [
+                     info: [
                        %{
-                         "created_at" => 1_331_569_103,
-                         "global_hash" => "900913",
-                         "short_url" => "http://bit.ly/ze6poY",
-                         "title" => "Google",
-                         "user_hash" => "ze6poY"
+                         created_at: 1_331_569_103,
+                         global_hash: "900913",
+                         short_url: "http://bit.ly/ze6poY",
+                         title: "Google",
+                         user_hash: "ze6poY"
                        }
                      ]
                    },
@@ -102,20 +102,20 @@ defmodule Bitly.LinkTest do
         assert Link.info("http://bit.ly/ze6poY", options) ==
                  %Link{
                    data: %{
-                     "info" => [
+                     info: [
                        %{
-                         "created_at" => 1_212_926_400,
-                         "global_hash" => "2bYgqR",
-                         "hash" => "2bYgqR",
-                         "title" => "CNN - Breaking News, Latest News and Videos",
-                         "user_hash" => "2bYgqR"
+                         created_at: 1_212_926_400,
+                         global_hash: "2bYgqR",
+                         hash: "2bYgqR",
+                         title: "CNN - Breaking News, Latest News and Videos",
+                         user_hash: "2bYgqR"
                        },
                        %{
-                         "created_at" => 1_331_569_103,
-                         "global_hash" => "900913",
-                         "short_url" => "http://bit.ly/ze6poY",
-                         "title" => "Google",
-                         "user_hash" => "ze6poY"
+                         created_at: 1_331_569_103,
+                         global_hash: "900913",
+                         short_url: "http://bit.ly/ze6poY",
+                         title: "Google",
+                         user_hash: "ze6poY"
                        }
                      ]
                    },
@@ -135,13 +135,13 @@ defmodule Bitly.LinkTest do
         assert Link.info("http://bit.ly/ze6poY", [format: "json"], client) ==
                  %Link{
                    data: %{
-                     "info" => [
+                     info: [
                        %{
-                         "created_at" => 1_331_569_103,
-                         "global_hash" => "900913",
-                         "short_url" => "http://bit.ly/ze6poY",
-                         "title" => "Google",
-                         "user_hash" => "ze6poY"
+                         created_at: 1_331_569_103,
+                         global_hash: "900913",
+                         short_url: "http://bit.ly/ze6poY",
+                         title: "Google",
+                         user_hash: "ze6poY"
                        }
                      ]
                    },
@@ -160,10 +160,10 @@ defmodule Bitly.LinkTest do
         assert Link.lookup("http://www.google.com/") ==
                  %Link{
                    data: %{
-                     "link_lookup" => [
+                     link_lookup: [
                        %{
-                         "aggregate_link" => "http://bit.ly/2V6CFi",
-                         "url" => "http://www.google.com/"
+                         aggregate_link: "http://bit.ly/2V6CFi",
+                         url: "http://www.google.com/"
                        }
                      ]
                    },
@@ -183,10 +183,10 @@ defmodule Bitly.LinkTest do
         assert Link.lookup("http://www.google.com/", client) ==
                  %Link{
                    data: %{
-                     "link_lookup" => [
+                     link_lookup: [
                        %{
-                         "aggregate_link" => "http://bit.ly/2V6CFi",
-                         "url" => "http://www.google.com/"
+                         aggregate_link: "http://bit.ly/2V6CFi",
+                         url: "http://www.google.com/"
                        }
                      ]
                    },
@@ -205,11 +205,11 @@ defmodule Bitly.LinkTest do
         assert Link.shorten("http://google.com/") ==
                  %Link{
                    data: %{
-                     "global_hash" => "3j4ir4",
-                     "hash" => "2iHe1Wi",
-                     "long_url" => "http://google.com/",
-                     "new_hash" => 0,
-                     "url" => "http://bit.ly/2iHe1Wi"
+                     global_hash: "3j4ir4",
+                     hash: "2iHe1Wi",
+                     long_url: "http://google.com/",
+                     new_hash: 0,
+                     url: "http://bit.ly/2iHe1Wi"
                    },
                    status_code: 200,
                    status_txt: "OK"
@@ -237,11 +237,11 @@ defmodule Bitly.LinkTest do
         assert Link.shorten("http://google.com/", [], client) ==
                  %Link{
                    data: %{
-                     "global_hash" => "3j4ir4",
-                     "hash" => "2iHe1Wi",
-                     "long_url" => "http://google.com/",
-                     "new_hash" => 0,
-                     "url" => "http://bit.ly/2iHe1Wi"
+                     global_hash: "3j4ir4",
+                     hash: "2iHe1Wi",
+                     long_url: "http://google.com/",
+                     new_hash: 0,
+                     url: "http://bit.ly/2iHe1Wi"
                    },
                    status_code: 200,
                    status_txt: "OK"
