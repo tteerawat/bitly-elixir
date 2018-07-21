@@ -29,7 +29,7 @@ defmodule Bitly.MixProject do
       {:poison, "~> 2.0 or ~> 3.0"},
       {:ex_doc, "~> 0.18.1", only: :dev, runtime: false},
       {:exvcr, "~> 0.9.0", only: :test},
-      {:excoveralls, "~> 0.7.4", only: :test}
+      {:excoveralls, "~> 0.9", only: :test}
     ]
   end
 
