@@ -7,12 +7,12 @@ defmodule Bitly.Client do
 
   @default_base_url "https://api-ssl.bitly.com/v3"
 
-  @spec new(keyword) :: Tesla.Client.t()
+  @spec new(keyword) :: t()
   def new(attrs \\ []) do
     base_url = attrs[:base_url] || @default_base_url
     access_token = attrs[:access_token] || Application.get_env(:bitly, :access_token)
 
-    Tesla.build_client([
+    Tesla.client([
       {Tesla.Middleware.Headers, [{"user-agent", "Bitly-Elixir"}]},
       {Tesla.Middleware.BaseUrl, base_url},
       {Tesla.Middleware.Query, [access_token: access_token]}
