@@ -25,11 +25,11 @@ defmodule Bitly.MixProject do
 
   defp deps do
     [
-      {:tesla, "~> 1.1"},
-      {:jason, "~> 1.1"},
-      {:ex_doc, "~> 0.18.1", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.24", only: :dev, runtime: false},
+      {:excoveralls, "~> 0.9", only: :test},
       {:exvcr, "~> 0.10", only: :test},
-      {:excoveralls, "~> 0.9", only: :test}
+      {:jason, "~> 1.1"},
+      {:tesla, "~> 1.1"}
     ]
   end
 
@@ -42,7 +42,7 @@ defmodule Bitly.MixProject do
       files: ~w(lib mix.exs README.md),
       maintainers: ["Teerawat Lamanchart"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/teerawat1992/bitly-elixir"}
+      links: %{"GitHub" => "https://github.com/tteerawat/bitly-elixir"}
     ]
   end
 end
